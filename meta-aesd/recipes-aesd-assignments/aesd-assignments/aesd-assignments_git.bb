@@ -8,11 +8,12 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-TheFakeMont
 
 PV = "1.0+git${SRCPV}"
 
-SRCREV = "b1fb21b99d6eb86cde7330787d724a3f8b1b0f20"
+SRCREV = "b63a45aaa9fbe44c7d7a5f329a4d15139a4509b0"
 
 S = "${WORKDIR}/git/server"
 
-FILES:${PN} += "${bindir}/aesdsocket ${sysconfdir}/init.d/aesdsocket-start-stop"
+FILES:${PN} += "${bindir}/aesdsocket"
+FILES:${PN} += "${sysconfdir}/init.d/aesdsocket-start-stop"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop"
 
